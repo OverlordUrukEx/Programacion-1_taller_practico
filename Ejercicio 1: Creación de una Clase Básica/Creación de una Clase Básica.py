@@ -1,4 +1,3 @@
-# clase carro 
 class Carro:
     def __init__(self, marca, modelo, año): # constructor de la clase
         self.marca = marca # atributo de la clase
