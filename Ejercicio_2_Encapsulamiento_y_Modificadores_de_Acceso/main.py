@@ -7,7 +7,6 @@ mi_carro1 = Encapsulamiento_y_Modificadores_de_Acceso.Carro("Honda", "Camry", 20
 # crear una tercera instancia de la clase Carro
 mi_carro2 = Encapsulamiento_y_Modificadores_de_Acceso.Carro("Ford", "Mustang", 2022)
 
-
 # mostrar la información del carro
 mi_carro.describir() # muestra la información del primer carro
 mi_carro1.describir() # muestra la información del segundo carro
