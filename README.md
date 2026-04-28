@@ -2,7 +2,7 @@
 
 Este repositorio contiene la solución al taller de modelamiento de objetos en Python. Si eres un revisor o un colaborador y no tienes experiencia previa configurando entornos de programación, sigue esta guía paso a paso.
 
-![Tabla_Reparticion_Ejercicios](https://ibb.co/Kz3fqgxr)
+![Tabla_Reparticion_Ejercicios](https://i.ibb.co/vvKTPW4j/tabla-integrantes-ficheros-y-actividad.png)
 
 ## 👥 Equipo de Trabajo
 * **Johan Marcelo Rojas** - *Ingeniería de Sistemas*
