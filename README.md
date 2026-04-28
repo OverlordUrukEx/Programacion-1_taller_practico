@@ -4,7 +4,7 @@ Este repositorio contiene la solución al taller de modelamiento de objetos en P
 
 ## 👥 Equipo de Trabajo
 * **Johan Marcelo Rojas** - *Ingeniería de Sistemas*
-* [Integrante 2]
+* **Jhon Jairo Linares** - *Ingeniería de Sistemas*
 * [Integrante 3]
 * [Integrante 4]
 * [Integrante 5]
