@@ -14,3 +14,10 @@ print("\n--> Instancia 2")
 mi_carro1.describir()
 print("\n--> Instancia 3")
 mi_carro2.describir()
+
+print("\nEjercicio 8: Interfaces")
+from recursos.modelos.interfaces.volador import Pajaro, Avion
+pajaro = Pajaro()
+avion = Avion()
+print(pajaro.volar())
+print(avion.volar())

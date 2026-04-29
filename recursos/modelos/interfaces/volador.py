@@ -7,8 +7,8 @@ class Volador(ABC):
 
 class Pajaro(Volador):
     def volar(self):
-        print("El pájaro vuela con sus alas.")
+        return "El pájaro vuela con sus alas."
 
 class Avion(Volador):
     def volar(self):
-        print("El avión vuela con sus turbinas.")
+        return "El avión vuela con sus turbinas."
