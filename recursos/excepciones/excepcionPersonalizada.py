@@ -20,3 +20,4 @@ def validar_anio(mensaje):
             print("-> Error: Ingrese un año válido (1886-2026).")
         except ValueError:
             print("-> Error: Debe ser un número entero.")
+            
