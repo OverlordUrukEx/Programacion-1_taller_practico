@@ -1,9 +1,9 @@
 class Coche: # Definición de la clase Coche, que representa un vehículo con atributos y métodos relacionados.
     def __init__(self, marca, modelo, anio): # Constructor de la clase Coche, que se llama automáticamente al crear una instancia de esta clase. Recibe tres parámetros: marca, modelo y año, que son necesarios para crear un objeto de tipo Coche.
         # Atributos públicos: La forma más básica y simple de iniciar
-        self.marca = marca # Aunque la marca es un dato importante, lo dejamos como público para simplificar el acceso a esta información. En un caso real, podríamos querer protegerlo con validaciones adicionales, pero para este ejemplo, lo mantenemos simple.
-        self.modelo = modelo # Aunque el modelo es un dato importante, lo dejamos como público para simplificar el acceso a esta información. En un caso real, podríamos querer protegerlo con validaciones adicionales, pero para este ejemplo, lo mantenemos simple.
-        self.anio = anio # Aunque el año es un dato importante, lo dejamos como público para simplificar el acceso a esta información. En un caso real, podríamos querer protegerlo con validaciones adicionales, pero para este ejemplo, lo mantenemos simple.
+        self.__marca = marca # Aunque la marca es un dato importante, lo dejamos como público para simplificar el acceso a esta información. En un caso real, podríamos querer protegerlo con validaciones adicionales, pero para este ejemplo, lo mantenemos simple.
+        self.__modelo = modelo # Aunque el modelo es un dato importante, lo dejamos como público para simplificar el acceso a esta información. En un caso real, podríamos querer protegerlo con validaciones adicionales, pero para este ejemplo, lo mantenemos simple.
+        self.__anio = anio # Aunque el año es un dato importante, lo dejamos como público para simplificar el acceso a esta información. En un caso real, podríamos querer protegerlo con validaciones adicionales, pero para este ejemplo, lo mantenemos simple.
 
 # --- Getters y Setters para MARCA ---
     def getMarca(self): # El método getMarca() es un getter que permite acceder al valor del atributo privado __marca desde fuera de la clase. Devuelve el valor actual de la marca del coche.
