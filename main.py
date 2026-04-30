@@ -38,7 +38,8 @@ print(f"Confirmación de marca vía Getter: {mi_carro.getMarca()}")
 mi_carro.describir()
 
 print("\nEjercicio 8: Interfaces")
-from recursos.modelos.interfaces.volador import Pajaro, Avion
+from recursos.modelos.animales.pajaro import Pajaro
+from recursos.modelos.transporte.avion import Avion
 pajaro = Pajaro()
 avion = Avion()
 print(pajaro.volar())
