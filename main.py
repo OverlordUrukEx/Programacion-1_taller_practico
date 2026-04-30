@@ -14,19 +14,6 @@ mi_carro = coche.Coche(marca_ini, mod_ini, anio_ini)
 
 print("\n--> Estado del objeto tras Ejercicio 1:")
 mi_carro.describir()
-<<<<<<< HEAD
-print("\n--> Instancia 2")
-mi_carro1.describir()
-print("\n--> Instancia 3")
-mi_carro2.describir()
-
-print("\nEjercicio 8: Interfaces")
-from recursos.modelos.interfaces.volador import Pajaro, Avion
-pajaro = Pajaro()
-avion = Avion()
-print(pajaro.volar())
-print(avion.volar())
-=======
 
 # ==========================================================
 # EJERCICIO 2: Modificación mediante Setters [cite: 6]
@@ -49,4 +36,10 @@ print("\n--> Estado del objeto tras Ejercicio 2 (Actualizado):")
 # Verificamos los cambios usando los Getters o el método describir 
 print(f"Confirmación de marca vía Getter: {mi_carro.getMarca()}")
 mi_carro.describir()
->>>>>>> main
+
+print("\nEjercicio 8: Interfaces")
+from recursos.modelos.interfaces.volador import Pajaro, Avion
+pajaro = Pajaro()
+avion = Avion()
+print(pajaro.volar())
+print(avion.volar())
