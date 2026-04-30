@@ -37,7 +37,19 @@ print("\n--> Estado del objeto tras Ejercicio 2 (Actualizado):")
 print(f"Confirmación de marca vía Getter: {mi_carro.getMarca()}")
 mi_carro.describir()
 
-print("\nEjercicio 8: Interfaces")
+print("\n--> Ejercicio 4: Herencia")
+from recursos.modelos.transporte.carro import Carro
+from recursos.modelos.transporte.bicicleta import Bicicleta
+carro1 = Carro(120, 4, "Todoterreno", "Diesel")
+carro2 = Carro(150, 4, "Deportivo", "Gasolina")
+bicicleta1 = Bicicleta(30, 2, "Trek", "Montaña")
+bicicleta2 = Bicicleta(25, 2, "Giant", "Urbana")
+print(carro1.describir_carro())
+print(carro2.describir_carro())
+print(bicicleta1.describir_bicicleta())
+print(bicicleta2.describir_bicicleta())
+
+print("\n--> Ejercicio 8: Interfaces")
 from recursos.modelos.animales.pajaro import Pajaro
 from recursos.modelos.transporte.avion import Avion
 pajaro = Pajaro()
