@@ -1,15 +1,20 @@
 from recursos.modelos.transporte import coche
+from recursos.excepciones.excepcionPersonalizada import validar_entrada, validar_anio
 
-mi_carro_marca = input("Ingrese la marca del carro: ")
-mi_carro_modelo = input("Ingrese el modelo del carro: ")
-mi_carro_año = int(input("Ingrese el año del carro: "))
+# ==========================================================
+# EJERCICIO 1: Creación de la Instancia [cite: 1]
+# ==========================================================
+print("=== EJERCICIO 1: CREACIÓN DE OBJETO ===")
+marca_ini = validar_entrada("Ingrese marca inicial: ")
+mod_ini = validar_entrada("Ingrese modelo inicial: ")
+anio_ini = validar_anio("Ingrese año inicial: ")
 
-mi_carro = coche.Coche(mi_carro_marca, mi_carro_modelo, mi_carro_año)
-mi_carro1 = coche.Coche("Honda", "Camry", 2021)
-mi_carro2 = coche.Coche("Ford", "Mustang", 2022)
+# Creamos el objeto con los datos capturados [cite: 4]
+mi_carro = coche.Coche(marca_ini, mod_ini, anio_ini)
 
-print("\n--> Instancia 1")
+print("\n--> Estado del objeto tras Ejercicio 1:")
 mi_carro.describir()
+<<<<<<< HEAD
 print("\n--> Instancia 2")
 mi_carro1.describir()
 print("\n--> Instancia 3")
@@ -21,3 +26,27 @@ pajaro = Pajaro()
 avion = Avion()
 print(pajaro.volar())
 print(avion.volar())
+=======
+
+# ==========================================================
+# EJERCICIO 2: Modificación mediante Setters [cite: 6]
+# ==========================================================
+print("\n" + "="*40) # Separador visual para diferenciar los ejercicios
+print("=== EJERCICIO 2: ACTUALIZACIÓN (SETTERS) ===")
+print("Vamos a modificar el objeto existente...")
+
+# Capturamos nuevos datos para demostrar los métodos SET 
+nueva_marca = validar_entrada("Ingrese la NUEVA marca: ")
+nuevo_mod = validar_entrada("Ingrese el NUEVO modelo: ")
+nuevo_anio = validar_anio("Ingrese el NUEVO año: ")
+
+# Aplicamos los cambios al objeto original 
+mi_carro.setMarca(nueva_marca)
+mi_carro.setModelo(nuevo_mod)
+mi_carro.setAnio(nuevo_anio)
+
+print("\n--> Estado del objeto tras Ejercicio 2 (Actualizado):")
+# Verificamos los cambios usando los Getters o el método describir 
+print(f"Confirmación de marca vía Getter: {mi_carro.getMarca()}")
+mi_carro.describir()
+>>>>>>> main
