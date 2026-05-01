@@ -1,36 +1,37 @@
-# 1. Primero definimos la pieza pequeña: El Motor
-class Motor:
+# =========================================================
+# EJERCICIO 9: Composición
+# =========================================================
+
+# La composicion es cuando una clase tiene dentro un objeto de otra clase.
+# En este caso, Coche tiene un Motor adentro.
+
+class Motor: # clase Motor con sus atributos
     def __init__(self, potencia, tipo):
-        # Guardamos las características básicas del motor
-        self.potencia = potencia
-        self.tipo = tipo
-
-    def describir_motor(self):
-        # Un método para que el motor diga sus características
-        return f"Motor {self.tipo} de {self.potencia} CV"
-
-# 2. Definimos la clase principal: El Coche
-class Coche:
-    def __init__(self, marca, modelo, motor):
-        # Aquí está la COMPOSICIÓN:
-        # El coche no solo recibe datos, recibe un OBJETO Motor completo.
-        self.marca = marca
-        self.modelo = modelo
-        self.motor = motor  # <-- Esta variable guarda el objeto Motor que recibimos
+        self.potencia = potencia # potencia del motor en caballos de fuerza
+        self.tipo = tipo # tipo de motor, por ejemplo gasolina o electrico
 
     def describir(self):
-        # Al pedirle al motor que se describa, usamos el objeto motor que guardamos arriba
-        info_motor = self.motor.describir_motor()
-        print(f"Coche: {self.marca} {self.modelo} | {info_motor}")
+        print(f"  Motor: {self.tipo}, {self.potencia} HP") # muestra los detalles del motor
 
-# --- Programa Principal ---
 
-# Primero creamos el motor (es como armar la pieza por separado)
-mi_motor = Motor(150, "Gasolina")
+class Coche: # clase Coche que contiene un objeto Motor
+    def __init__(self, marca, modelo, potencia, tipo):
+        self.marca = marca # marca del coche
+        self.modelo = modelo # modelo del coche
+        self.motor = Motor(potencia, tipo) # creamos el motor dentro del coche
 
-# Ahora creamos el coche y le "metemos" el motor dentro
-mi_coche = Coche("Toyota", "Corolla", mi_motor)
+    def describir(self): # describe el coche incluyendo los detalles del motor
+        print(f"Coche: {self.marca} {self.modelo}") # muestra marca y modelo
+        self.motor.describir() # llama al describir del motor
+        print("-" * 25)
 
-# Verificamos
-print("--- Resultado de la Composición ---")
-mi_coche.describir()
+
+# creamos algunos coches con sus motores
+coche1 = Coche("Lamborghini", "Huracan", 610, "Gasolina")
+coche2 = Coche("Tesla", "Model S", 670, "Electrico")
+coche3 = Coche("BMW", "M3", 503, "Gasolina")
+
+print("--- Coches y sus motores ---")
+coche1.describir()
+coche2.describir()
+coche3.describir()
