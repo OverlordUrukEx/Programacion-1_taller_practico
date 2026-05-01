@@ -1,14 +1,14 @@
 class Coche: # definimos la clase Coche
     
-    def __init__(self, marca, modelo, anio): # constructor de la clase
+    def __init__(self, marca, modelo, año): # constructor de la clase
         self.marca = marca # guardamos la marca
         self.modelo = modelo # guardamos el modelo
-        self.anio = anio # guardamos el anio
+        self.año = año # guardamos el año
 
     def describir(self): # metodo para mostrar la informacion del coche
         print(f"Marca: {self.marca}") # muestra la marca del coche
         print(f"Modelo: {self.modelo}") # muestra el modelo del coche
-        print(f"Año: {self.anio}") # muestra el año del coche
+        print(f"Año: {self.año}") # muestra el año del coche
 
 
 # =========================================================
