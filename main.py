@@ -1,0 +1,104 @@
+from recursos.modelos.transporte import coche
+from recursos.excepciones.excepcionPersonalizada import validar_entrada, validar_anio
+
+# ==========================================================
+# EJERCICIO 1: Creación de la Instancia [cite: 1]
+# ==========================================================
+print("=== EJERCICIO 1: CREACIÓN DE OBJETO ===")
+marca_ini = validar_entrada("Ingrese marca inicial: ")
+mod_ini = validar_entrada("Ingrese modelo inicial: ")
+anio_ini = validar_anio("Ingrese año inicial: ")
+
+# Creamos el objeto con los datos capturados [cite: 4]
+mi_carro = coche.Coche(marca_ini, mod_ini, anio_ini)
+
+print("\n--> Estado del objeto tras Ejercicio 1:")
+mi_carro.describir()
+
+# ==========================================================
+# EJERCICIO 2: Modificación mediante Setters [cite: 6]
+# ==========================================================
+print("\n" + "="*40) # Separador visual para diferenciar los ejercicios
+print("=== EJERCICIO 2: ACTUALIZACIÓN (SETTERS) ===")
+print("Vamos a modificar el objeto existente...")
+
+# Capturamos nuevos datos para demostrar los métodos SET 
+nueva_marca = validar_entrada("Ingrese la NUEVA marca: ")
+nuevo_mod = validar_entrada("Ingrese el NUEVO modelo: ")
+nuevo_anio = validar_anio("Ingrese el NUEVO año: ")
+
+# Aplicamos los cambios al objeto original 
+mi_carro.setMarca(nueva_marca)
+mi_carro.setModelo(nuevo_mod)
+mi_carro.setAnio(nuevo_anio)
+
+print("\n--> Estado del objeto tras Ejercicio 2 (Actualizado):")
+# Verificamos los cambios usando los Getters o el método describir 
+print(f"Confirmación de marca vía Getter: {mi_carro.getMarca()}")
+mi_carro.describir()
+
+# ==========================================================
+# EJERCICIO 3: Constructores
+# ==========================================================
+print("\n--> Ejercicio 3: Constructores")
+coche1 = coche.Coche("Toyota", "Corolla", 2021)
+coche2 = coche.Coche("Ford", "Mustang", 2023)
+coche3 = coche.Coche("Honda", "Civic", 2019)
+coche4 = coche.Coche("Renault", "Sandero", 2015)
+coche1.describir()
+coche2.describir()
+coche3.describir()
+coche4.describir()
+
+print("\n--> Ejercicio 4: Herencia")
+from recursos.modelos.transporte.carro import Carro
+from recursos.modelos.transporte.bicicleta import Bicicleta
+carro1 = Carro(120, 4, "Todoterreno", "Diesel")
+carro2 = Carro(150, 4, "Deportivo", "Gasolina")
+bicicleta1 = Bicicleta(30, 2, "Trek", "Montaña")
+bicicleta2 = Bicicleta(25, 2, "Giant", "Urbana")
+print(carro1.describir_carro())
+print(carro2.describir_carro())
+print(bicicleta1.describir_bicicleta())
+print(bicicleta2.describir_bicicleta())
+
+# ==========================================================
+# EJERCICIO 7: Clases Abstractas
+# ==========================================================
+print("\n--> Ejercicio 7: Clases Abstractas")
+from Ejercicio_7_Clases_Abstractas.Clases_Abstractas import Perro, Gato, Vaca, Pato
+animales = [Perro(), Gato(), Vaca(), Pato()]
+print("--- Sonidos de los animales ---")
+for animal in animales:
+    animal.hacerSonido()
+
+print("\n--> Ejercicio 8: Interfaces")
+from recursos.modelos.animales.pajaro import Pajaro
+from recursos.modelos.transporte.avion import Avion
+pajaro = Pajaro()
+avion = Avion()
+print(pajaro.volar())
+print(avion.volar())
+
+print("\n--> Ejercicio 9: Composicion")
+from recursos.modelos.transporte.motor import Motor
+
+class CocheConMotor:
+    def __init__(self, marca, modelo, potencia, tipo):
+        self.marca = marca
+        self.modelo = modelo
+        self.motor = Motor(potencia, tipo)
+
+    def describir(self):
+        print(f"Coche: {self.marca} {self.modelo}")
+        print(self.motor.describir())
+        print("-" * 25)
+
+coche1 = CocheConMotor("Lamborghini", "Huracan", 610, "Gasolina")
+coche2 = CocheConMotor("Tesla", "Model S", 670, "Electrico")
+coche3 = CocheConMotor("BMW", "M3", 503, "Gasolina")
+coche4 = CocheConMotor("Toyota", "Prius", 121, "Hibrido")
+coche1.describir()
+coche2.describir()
+coche3.describir()
+coche4.describir()
