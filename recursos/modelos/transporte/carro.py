@@ -13,4 +13,4 @@ class Carro(Vehiculo):
         return f"El carro acelera apretando el acelerador a {self.velocidad} km/h."
     
     def propiedades(self):
-        return f"El carro tiene {self.ruedas} ruedas"
+        return f"El carro tiene {self.ruedas} ruedas."

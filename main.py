@@ -37,7 +37,7 @@ print("\n--> Estado del objeto tras Ejercicio 2 (Actualizado):")
 print(f"Confirmación de marca vía Getter: {mi_carro.getMarca()}")
 mi_carro.describir()
 
-print("\n--> Ejercicio 4: Herencia")
+print("\n" + "|"+ "-"*30 + "|" + "\n" + "|---> Ejercicio 4: Herencia"  + "\n" + "|" + "-"*30 + "|")
 from recursos.modelos.transporte.carro import Carro
 from recursos.modelos.transporte.bicicleta import Bicicleta
 carro1 = Carro(120, 4, "Todoterreno", "Diesel")
@@ -49,7 +49,7 @@ print(carro2.describir_carro())
 print(bicicleta1.describir_bicicleta())
 print(bicicleta2.describir_bicicleta())
 
-print("\n--> Ejercicio 5: Sobrescritura de Métodos")
+print("\n" + "|"+ "-"*45 + "|" + "\n" + "|---> Ejercicio 5: Sobrescritura de Métodos"  + "\n" + "|" + "-"*45 + "|")
 print(carro1.acelerar())
 print(carro2.acelerar())
 print(carro1.propiedades())
@@ -59,7 +59,13 @@ print(bicicleta2.acelerar())
 print(bicicleta1.propiedades())
 print(bicicleta2.propiedades())
 
-print("\n--> Ejercicio 8: Interfaces")
+print("\n" + "|"+ "-"*30 + "|" + "\n" + "|---> Ejercicio 6: Polimorfismo"  + "\n" + "|" + "-"*30 + "|")
+vehiculos = [carro1, carro2, bicicleta1, bicicleta2]
+for v in vehiculos:
+    print(v.acelerar())
+    print(v.propiedades())
+
+print("\n" + "|"+ "-"*30 + "|" + "\n" + "|---> Ejercicio 8: Interfaces"  + "\n" + "|" + "-"*30 + "|")
 from recursos.modelos.animales.pajaro import Pajaro
 from recursos.modelos.transporte.avion import Avion
 pajaro = Pajaro()
