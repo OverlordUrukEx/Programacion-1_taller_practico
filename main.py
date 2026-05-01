@@ -37,6 +37,20 @@ print("\n--> Estado del objeto tras Ejercicio 2 (Actualizado):")
 print(f"Confirmación de marca vía Getter: {mi_carro.getMarca()}")
 mi_carro.describir()
 
+# ==========================================================
+# EJERCICIO 3: Constructores
+# ==========================================================
+print("\n--> Ejercicio 3: Constructores")
+coche1 = coche.Coche("Toyota", "Corolla", 2021)
+coche2 = coche.Coche("Ford", "Mustang", 2023)
+coche3 = coche.Coche("Honda", "Civic", 2019)
+coche4 = coche.Coche("Renault", "Sandero", 2015)
+coche1.describir()
+coche2.describir()
+coche3.describir()
+coche4.describir()
+
+print("\n--> Ejercicio 4: Herencia")
 print("\n" + "|"+ "-"*30 + "|" + "\n" + "|---> Ejercicio 4: Herencia"  + "\n" + "|" + "-"*30 + "|")
 from recursos.modelos.transporte.carro import Carro
 from recursos.modelos.transporte.bicicleta import Bicicleta
@@ -65,10 +79,41 @@ for v in vehiculos:
     print(v.acelerar())
     print(v.propiedades())
 
-print("\n" + "|"+ "-"*30 + "|" + "\n" + "|---> Ejercicio 8: Interfaces"  + "\n" + "|" + "-"*30 + "|")
-from recursos.modelos.animales.pajaro import Pajaro
-from recursos.modelos.transporte.avion import Avion
-pajaro = Pajaro()
-avion = Avion()
-print(pajaro.volar())
-print(avion.volar())
+# ==========================================================
+# EJERCICIO 7: Clases Abstractas
+# ==========================================================
+print("\n--> Ejercicio 7: Clases Abstractas")
+from recursos.modelos.animales.perro import Perro
+from recursos.modelos.animales.gato import Gato
+from recursos.modelos.animales.vaca import Vaca
+from recursos.modelos.animales.pato import Pato
+animales = [Perro(), Gato(), Vaca(), Pato()]
+print("--- Sonidos de los animales ---")
+for animal in animales:
+    animal.hacerSonido()
+
+print("\n--> Ejercicio 8: Interfaces")
+print("\n" + "|"+ "-"*45 + "|" + "\n" + "|---> Ejercicio 5: Sobrescritura de Métodos"  + "\n" + "|" + "-"*45 + "|")
+print(carro1.acelerar())
+print(carro2.acelerar())
+print(carro1.propiedades())
+print(carro2.propiedades())
+print(bicicleta1.acelerar())
+print(bicicleta2.acelerar())
+print(bicicleta1.propiedades())
+print(bicicleta2.propiedades())
+
+# ==========================================================
+# EJERCICIO 9: Composición
+# ==========================================================
+print("\n--> Ejercicio 9: Composicion")
+from recursos.modelos.transporte.coche import CocheConMotor
+coche1 = CocheConMotor("Lamborghini", "Huracan", 2023, 610, "Gasolina")
+coche2 = CocheConMotor("Tesla", "Model S", 2022, 670, "Electrico")
+coche3 = CocheConMotor("BMW", "M3", 2021, 503, "Gasolina")
+coche4 = CocheConMotor("Toyota", "Prius", 2020, 121, "Hibrido")
+coche1.describir()
+coche2.describir()
+coche3.describir()
+coche4.describir()
+

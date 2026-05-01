@@ -32,3 +32,15 @@ class Coche: # Definición de la clase Coche, que representa un vehículo con at
         print(f"Marca: {self.__marca}") # El método describir() muestra la información del coche en la consola. Accede a los atributos privados __marca, __modelo y __anio para mostrar su valor. Esto demuestra que dentro de la clase, podemos acceder a los atributos privados sin problemas, lo que es una parte fundamental de la encapsulación en la programación orientada a objetos.
         print(f"Modelo: {self.__modelo}") # El método describir() muestra la información del coche en la consola. Accede a los atributos privados __marca, __modelo y __anio para mostrar su valor. Esto demuestra que dentro de la clase, podemos acceder a los atributos privados sin problemas, lo que es una parte fundamental de la encapsulación en la programación orientada a objetos.
         print(f"Año: {self.__anio}") # El método describir() muestra la información del coche en la consola. Accede a los atributos privados __marca, __modelo y __anio para mostrar su valor. Esto demuestra que dentro de la clase, podemos acceder a los atributos privados sin problemas, lo que es una parte fundamental de la encapsulación en la programación orientada a objetos.
+
+# --- Composición ---
+from recursos.modelos.transporte.motor import Motor
+
+class CocheConMotor(Coche): # hereda de Coche y le agrega un motor
+    def __init__(self, marca, modelo, año, potencia, tipo):
+        super().__init__(marca, modelo, año) # le pasamos los datos básicos al Coche
+        self.motor = Motor(potencia, tipo) # creamos el motor dentro del coche
+
+    def describir(self): # describe el coche incluyendo los detalles del motor
+        super().describir() # muestra marca, modelo y año
+        print(self.motor.describir()) # muestra los detalles del motor
