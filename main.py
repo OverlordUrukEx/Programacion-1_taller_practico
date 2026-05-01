@@ -66,7 +66,10 @@ print(bicicleta2.describir_bicicleta())
 # EJERCICIO 7: Clases Abstractas
 # ==========================================================
 print("\n--> Ejercicio 7: Clases Abstractas")
-from Ejercicio_7_Clases_Abstractas.Clases_Abstractas import Perro, Gato, Vaca, Pato
+from recursos.modelos.animales.perro import Perro
+from recursos.modelos.animales.gato import Gato
+from recursos.modelos.animales.vaca import Vaca
+from recursos.modelos.animales.pato import Pato
 animales = [Perro(), Gato(), Vaca(), Pato()]
 print("--- Sonidos de los animales ---")
 for animal in animales:
@@ -80,7 +83,10 @@ avion = Avion()
 print(pajaro.volar())
 print(avion.volar())
 
-print("\n--> Ejercicio 9: Composicion")
+# ==========================================================
+# EJERCICIO 9: Composición
+# ==========================================================
+print("\n--> Ejercicio 9: Composición")
 from recursos.modelos.transporte.motor import Motor
 
 class CocheConMotor:

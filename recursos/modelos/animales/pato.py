@@ -1,6 +1,6 @@
 from recursos.modelos.animales.animal import Animal
 
-class Gato(Animal):
+class Pato(Animal):
     def hacerSonido(self):
-        print("Gato: ¡Miau!")
+        print("Pato: ¡Cuac!")
         
