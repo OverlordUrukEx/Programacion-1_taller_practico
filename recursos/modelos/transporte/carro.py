@@ -7,4 +7,10 @@ class Carro(Vehiculo):
         self.tipo_combustible = tipo_combustible
 
     def describir_carro(self):
-        return f"El carro es un {self.tipo_carro} que utiliza {self.tipo_combustible} como combustible. acelera a {self.velocidad} km/h y tiene {self.ruedas} ruedas."
+        return f"El carro es un {self.tipo_carro} que utiliza {self.tipo_combustible} como combustible."
+    
+    def acelerar(self):
+        return f"El carro acelera apretando el acelerador a {self.velocidad} km/h."
+    
+    def propiedades(self):
+        return f"El carro tiene {self.ruedas} ruedas"
