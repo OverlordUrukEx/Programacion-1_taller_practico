@@ -8,7 +8,7 @@ class Coche: # definimos la clase Coche
     def describir(self): # metodo para mostrar la informacion del coche
         print(f"Marca: {self.marca}") # muestra la marca del coche
         print(f"Modelo: {self.modelo}") # muestra el modelo del coche
-        print(f"Año: {self.anio}") # muestra el anio del coche
+        print(f"Año: {self.anio}") # muestra el año del coche
 
 
 # =========================================================
