@@ -4,4 +4,7 @@ class Vehiculo:
         self.ruedas = ruedas
 
     def acelerar(self):
-        return f"El vehículo acelera a {self.velocidad} km/h. Y tiene {self.ruedas} ruedas"
+        return f"El vehículo acelera a {self.velocidad} km/h."
+    
+    def propiedades(self):
+        return f"El vehículo tiene {self.ruedas} ruedas."

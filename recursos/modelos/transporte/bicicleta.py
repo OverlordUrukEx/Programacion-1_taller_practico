@@ -7,4 +7,10 @@ class Bicicleta(Vehiculo):
         self.tipo_bicicleta = tipo_bicicleta
 
     def describir_bicicleta(self):
-        return f"La bicicleta es una {self.tipo_bicicleta} de la marca {self.marca} que acelera a {self.velocidad} km/h y tiene {self.ruedas} ruedas."
+        return f"La bicicleta es una {self.tipo_bicicleta} de la marca {self.marca}."
+    
+    def acelerar(self):
+        return f"La bicicleta acelera pedaleando a {self.velocidad} km/h."
+
+    def propiedades(self):
+        return f"La bicicleta tiene {self.ruedas} ruedas."
