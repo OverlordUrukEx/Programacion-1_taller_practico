@@ -50,6 +50,8 @@ Existen dos formas de bajar el trabajo a tu PC:
 ---
 
 ## 📂 Estructura del Proyecto
+
+```bash
 PROGRAMACION-1_TALLER_PRACTICO/
 │
 ├── recursos/
