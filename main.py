@@ -50,7 +50,6 @@ coche2.describir()
 coche3.describir()
 coche4.describir()
 
-print("\n--> Ejercicio 4: Herencia")
 print("\n" + "|"+ "-"*30 + "|" + "\n" + "|---> Ejercicio 4: Herencia"  + "\n" + "|" + "-"*30 + "|")
 from recursos.modelos.transporte.carro import Carro
 from recursos.modelos.transporte.bicicleta import Bicicleta
