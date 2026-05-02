@@ -81,7 +81,7 @@ PROGRAMACION-1_TALLER_PRACTICO/
 ├── main.py
 ├── .gitignore
 └── README.md
-
+```
 ## 📝 Notas de Desarrollo
 * El código sigue los estándares de la asignatura de **Programación I**.
 * Se utiliza **Programación Orientada a Objetos (POO)**.
