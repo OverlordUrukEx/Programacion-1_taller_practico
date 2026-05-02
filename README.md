@@ -2,12 +2,12 @@
 
 Este repositorio contiene la solución al taller 1 de modelamiento de objetos en Python.
 
-| Integrante | Fichero                                                                                   | Ejercicios        |
-|------------|-------------------------------------------------------------------------------------------|-------------------|
-| Johan      | coche.py, excepcionPersonalizada.py                                                       | 1, 2, 10          |
-| Isabella   | animal.py, perro.py, gato.py, motor.py                                                    | 3, 7, 9           |
-| Jhon       | bicicleta.py, volador.py, avion.py, pajaro.py, coche.py, excepcionPersonalizada.py        | 4, 5, 6, 8, 10    |
-| Todos      | main.py                                                                                   |                   |
+| Integrante | Fichero                                                                                          | Ejercicios        |
+|------------|--------------------------------------------------------------------------------------------------|-------------------|
+| Johan      | coche.py, excepcionPersonalizada.py                                                              | 1, 2, 10          |
+| Isabella   | animal.py, perro.py, gato.py, pato.py, vaca.py, motor.py                                         | 3, 7, 9           |
+| Jhon       | vehiculo.py, bicicleta.py, volador.py, avion.py, pajaro.py, coche.py, excepcionPersonalizada.py  | 4, 5, 6, 8, 10    |
+| Todos      | main.py                                                                                          |                   |
 
 ## 👥 Equipo de Trabajo
 * **Johan Marcelo Rojas** - *Ingeniería de Sistemas*
@@ -50,14 +50,40 @@ Existen dos formas de bajar el trabajo a tu PC:
 ---
 
 ## 📂 Estructura del Proyecto
-* `/` : Raíz del proyecto con los archivos `.py` documentados.
-* `README.md` : Manual de instrucciones (este archivo).
-* `.gitignore` : Archivo para evitar que archivos basura de Windows se suban al servidor.
+PROGRAMACION-1_TALLER_PRACTICO/
+│
+├── recursos/
+│   ├── excepciones/
+│   │   └── excepcionPersonalizada.py
+│   │
+│   └── modelos/
+│       ├── animales/
+│       │   ├── animal.py
+│       │   ├── gato.py
+│       │   ├── pajaro.py
+│       │   ├── pato.py
+│       │   ├── perro.py
+│       │   └── vaca.py
+│       │
+│       ├── interfaces/
+│       │   └── volador.py
+│       │
+│       └── transporte/
+│           ├── avion.py
+│           ├── bicicleta.py
+│           ├── carro.py
+│           ├── coche.py
+│           ├── motor.py
+│           └── vehiculo.py
+│
+├── main.py
+├── .gitignore
+└── README.md
 
 ## 📝 Notas de Desarrollo
 * El código sigue los estándares de la asignatura de **Programación I**.
 * Se utiliza **Programación Orientada a Objetos (POO)**.
-* Cada clase e instancia está comentada para facilitar la auditoría del docente.
+* Se cumplen los requisitos del documento facilitado.
 
 ---
 *Facultad de Ingeniería - Universidad de Manizales*
