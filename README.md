@@ -1,8 +1,13 @@
 # Programación I - Taller Práctico: Modelamiento de Clases
 
-Este repositorio contiene la solución al taller de modelamiento de objetos en Python. Si eres un revisor o un colaborador y no tienes experiencia previa configurando entornos de programación, sigue esta guía paso a paso.
+Este repositorio contiene la solución al taller 1 de modelamiento de objetos en Python.
 
-![Tabla_Reparticion_Ejercicios](https://i.ibb.co/vvKTPW4j/tabla-integrantes-ficheros-y-actividad.png)
+| Integrante | Fichero                                                                                   | Ejercicios        |
+|------------|-------------------------------------------------------------------------------------------|-------------------|
+| Johan      | coche.py, excepcionPersonalizada.py                                                       | 1, 2, 10          |
+| Isabella   | animal.py, perro.py, gato.py, motor.py                                                    | 3, 7, 9           |
+| Jhon       | bicicleta.py, volador.py, avion.py, pajaro.py, coche.py, excepcionPersonalizada.py        | 4, 5, 6, 8, 10    |
+| Todos      | main.py                                                                                   |                   |
 
 ## 👥 Equipo de Trabajo
 * **Johan Marcelo Rojas** - *Ingeniería de Sistemas*
@@ -38,7 +43,7 @@ Existen dos formas de bajar el trabajo a tu PC:
 3. En la barra lateral izquierda, haz clic en el icono de **Extensiones** (cuadros pequeños) y busca **"Python"** (de Microsoft). Dale a **Instalar**.
 
 ### 4. Ejecución del Trabajo
-1. Dentro de VS Code, abre uno de los archivos `.py` (ej. `ejercicio_1.py`).
+1. Dentro de VS Code, abre uno de los archivos `.py` (ej. `main.py`).
 2. Presiona la tecla `F5` o haz clic en el botón de **Play** (triángulo) en la esquina superior derecha.
 3. Los resultados aparecerán en la parte inferior, en la pestaña llamada **Terminal**.
 
