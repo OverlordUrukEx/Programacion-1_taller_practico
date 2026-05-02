@@ -92,16 +92,13 @@ print("--- Sonidos de los animales ---")
 for animal in animales:
     animal.hacerSonido()
 
-print("\n--> Ejercicio 8: Interfaces")
-print("\n" + "|"+ "-"*45 + "|" + "\n" + "|---> Ejercicio 5: Sobrescritura de Métodos"  + "\n" + "|" + "-"*45 + "|")
-print(carro1.acelerar())
-print(carro2.acelerar())
-print(carro1.propiedades())
-print(carro2.propiedades())
-print(bicicleta1.acelerar())
-print(bicicleta2.acelerar())
-print(bicicleta1.propiedades())
-print(bicicleta2.propiedades())
+print("\n" + "|"+ "-"*45 + "|" + "\n" + "|---> Ejercicio 8: Interfaces"  + "\n" + "|" + "-"*45 + "|")
+from recursos.modelos.animales.pajaro import Pajaro
+from recursos.modelos.transporte.avion import Avion
+pajaro = Pajaro()
+avion = Avion()
+print(pajaro.volar())
+print(avion.volar())
 
 # ==========================================================
 # EJERCICIO 9: Composición
@@ -117,3 +114,22 @@ coche2.describir()
 coche3.describir()
 coche4.describir()
 
+print("\n" + "|"+ "-"*45 + "|" + "\n" + "|---> Ejercicio 10: Excepciones"  + "\n" + "|" + "-"*45 + "|")
+from recursos.modelos.transporte.coche import CocheExcepcion
+from recursos.excepciones.excepcionPersonalizada import ExcesoVelocidadException
+
+coche_excepcion = CocheExcepcion("Lamborghini", "Aventador", 2026)
+print(coche_excepcion.describir())
+
+try:
+    for incremento in [100, 20, 20, 20, 20, 30]:
+        print(f"\nIncrementando la velocidad en {incremento} km/h...")
+        coche_excepcion.incrementar_velocidad(incremento)
+        print(f"Velocidad incrementada exitosamente. Velocidad actual: {coche_excepcion.velocidad_actual} km/h")
+except ExcesoVelocidadException as e:
+    print("\n" + "|"+ "="*120 + "|" + "\n" + f"|===> Excepción capturada: {e.mensaje} <===|" + "\n" + "|" + "="*120 + "|")
+except Exception as e:
+    print(f"Error inesperado: {str(e)}")
+
+print(coche_excepcion.describir())
+print("\n" + "|"+ "="*90 + "|" + "\n" + "|===> FIN DEL PROGRAMA. Gracias por participar en el taller práctico de Programación 1.<===|"+ "\n" + "|" + "="*90 + "|")
