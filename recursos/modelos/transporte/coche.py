@@ -44,3 +44,24 @@ class CocheConMotor(Coche): # hereda de Coche y le agrega un motor
     def describir(self): # describe el coche incluyendo los detalles del motor
         super().describir() # muestra marca, modelo y año
         print(self.motor.describir()) # muestra los detalles del motor
+
+from recursos.excepciones.excepcionPersonalizada import ExcesoVelocidadException
+
+class CocheExcepcion(Coche):
+    def __init__(self, marca, modelo, anio, veocidad_actual=0):
+        super().__init__(marca, modelo, anio)
+        self.velocidad_actual = veocidad_actual
+        self.VELOCIDAD_MAXIMA = 200
+
+    def describir(self):
+        super().describir()
+        return f"\nVelocidad actual: {self.velocidad_actual} km/h"
+
+    def incrementar_velocidad(self, velocidad_incremento):
+        nueva_velocidad = self.velocidad_actual + velocidad_incremento
+        if nueva_velocidad > self.VELOCIDAD_MAXIMA:
+            raise ExcesoVelocidadException(
+                f"La velocidad actual ({nueva_velocidad} km/h) excede el límite de velocidad máxima permitida ({self.VELOCIDAD_MAXIMA} km/h)."
+            )
+        self.velocidad_actual = nueva_velocidad
+        return f"Velocidad actual: {self.velocidad_actual} km/h"

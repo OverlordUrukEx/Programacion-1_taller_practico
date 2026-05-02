@@ -20,3 +20,8 @@ def validar_anio(mensaje):
             print("-> Error: Ingrese un año válido (1886-2026).")
         except ValueError:
             print("-> Error: Debe ser un número entero.")
+
+class ExcesoVelocidadException(Exception):
+    def __init__(self, mensaje="¡Cuidado! Has excedido la velocidad máxima permitida."):
+        self.mensaje = mensaje
+        super().__init__(self.mensaje)
