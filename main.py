@@ -2,7 +2,7 @@ from recursos.modelos.transporte import coche
 from recursos.excepciones.excepcionPersonalizada import validar_entrada, validar_anio
 
 # ==========================================================
-# EJERCICIO 1: Creación de la Instancia [cite: 1]
+# EJERCICIO 1: Creación de la Instancia
 # ==========================================================
 print("=== EJERCICIO 1: CREACIÓN DE OBJETO ===")
 marca_ini = validar_entrada("Ingrese marca inicial: ")
@@ -16,7 +16,7 @@ print("\n--> Estado del objeto tras Ejercicio 1:")
 mi_carro.describir()
 
 # ==========================================================
-# EJERCICIO 2: Modificación mediante Setters [cite: 6]
+# EJERCICIO 2: Modificación mediante Setters
 # ==========================================================
 print("\n" + "="*40) # Separador visual para diferenciar los ejercicios
 print("=== EJERCICIO 2: ACTUALIZACIÓN (SETTERS) ===")
