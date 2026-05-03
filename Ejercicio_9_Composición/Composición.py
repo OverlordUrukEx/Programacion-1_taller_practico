@@ -30,8 +30,10 @@ class Coche: # clase Coche que contiene un objeto Motor
 coche1 = Coche("Lamborghini", "Huracan", 610, "Gasolina")
 coche2 = Coche("Tesla", "Model S", 670, "Electrico")
 coche3 = Coche("BMW", "M3", 503, "Gasolina")
+coche4 = CocheConMotor("Toyota", "Prius", 121, "Hibrido")
 
 print("--- Coches y sus motores ---")
 coche1.describir()
 coche2.describir()
 coche3.describir()
+coche4.describir()
